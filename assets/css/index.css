@@ -1,0 +1,23 @@
+body {
+  height: 100vh;
+  background-color: grey;
+  display: flex;
+  align-items: center;
+}
+
+main {
+  background-color: skyblue;
+}
+
+header {
+  margin-bottom: 60px;
+}
+
+h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.subheader {
+  font-size: 24px;
+}
