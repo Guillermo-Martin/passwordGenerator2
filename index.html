@@ -7,28 +7,46 @@
     <title>Password Generator</title>
     <link rel="stylesheet" href="./assets/css/reset.css" />
   </head>
+  
+  <!-- ---------- Body ---------- -->
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Password Generator</h1>
-      </header>
-      <div class="card">
-        <div class="card-header">
-          <h2>Generate a Password</h2>
-        </div>
-        <div class="card-body">
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
-        </div>
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
+    
+     <!-- ---------- Main content ---------- -->
+    <main>
+
+      <!-- ----- Header ----- -->
+      <div class="header-container">
+        <header>
+          <h1>Password Generator</h1>
+        </header>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+
+      <!-- ----- Generate password section ----- -->
+      <div class="generate-password-container">
+        <div class="card">
+          <div class="card-header">
+            <h2>Generate a Password</h2>
+          </div>
+          <div class="card-body">
+            <textarea
+              readonly
+              id="password"
+              placeholder="Your Secure Password"
+              aria-label="Generated Password"
+            ></textarea>
+          </div>
+          <div class="card-footer">
+            <button id="generate" class="btn">Generate Password</button>
+          </div>
         </div>
       </div>
-    </div>
+
+      
+      
+    </main>
+   
+    <!-- Javascript -->
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
