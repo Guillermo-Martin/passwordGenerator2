@@ -1,6 +1,6 @@
 # Password Generator
 
-https://guillermo-martin.github.io/passwordGenerator/
+<!-- https://guillermo-martin.github.io/passwordGenerator/
 
 ## Description
 
@@ -25,4 +25,4 @@ The app generates a password between 8 and 128 characters. When a user presses t
     * I also would Google things and attend office hours.
 
 ## Screenshot
-![homework 3 screenshot](./assets/images/Homework3-screenshot.png)
+![homework 3 screenshot](./assets/images/Homework3-screenshot.png) -->
