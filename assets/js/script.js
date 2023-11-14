@@ -5,7 +5,8 @@ let lowercaseLetters = document.getElementById("lowercase-letters");
 let uppercaseLetters = document.getElementById("uppercase-letters");
 let numbers = document.getElementById("numbers");
 let specialCharacters = document.getElementById("special-characters");
-let createPaswordBtn = document.getElementById("create-password")
+let createPaswordBtn = document.getElementById("create-password");
+let passwordLengthInput = document.getElementById("password-length");
 
 
 // ----------------------------------------------------------------
@@ -16,6 +17,7 @@ createPaswordBtn.addEventListener("click", () => {
   console.log("let's create a password!");
   // password options
   let passwordOptions = {};
+  let passwordLength = passwordLengthInput.value;
 
   // 1. check which boxes are checked and update the passwordOptions object
   for(let i = 0; i < checklistItems.length; i++) {
@@ -23,7 +25,13 @@ createPaswordBtn.addEventListener("click", () => {
     passwordOptions[checklistItems[i].id] = checklistItems[i].checked;
   }
 
-  // 2. then generate the password
+  // 2. get the boolean values from the passwordOptions object
+  console.log(passwordOptions);
+
+  // 3.  get the length value
+  console.log("line 31", passwordLength);
+
+  // 4. use these to create a password using the functions below
 });
 
 
