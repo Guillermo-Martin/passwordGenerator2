@@ -5,25 +5,29 @@ let lowercaseLetters = document.getElementById("lowercase-letters");
 let uppercaseLetters = document.getElementById("uppercase-letters");
 let numbers = document.getElementById("numbers");
 let specialCharacters = document.getElementById("special-characters");
+let createPaswordBtn = document.getElementById("create-password")
 
 
-// console.log(lowercaseLetters);
-// console.log(lowercaseLetters.checked);
+// ----------------------------------------------------------------
 
 
-// whenever a checklist item is checked/unchecked, run a function to see which options is checked/unchecked.
-// add an event listener to the checklist
-checklist.addEventListener("click", (event) => {
-  // console.log(event.target.id);
-  // console.log(event.target.checked);
+// create password function
+createPaswordBtn.addEventListener("click", () => {
+  console.log("let's create a password!");
+  // password options
+  let passwordOptions = {};
 
-  // each time a list item is checked, see which ones are checked
+  // 1. check which boxes are checked and update the passwordOptions object
   for(let i = 0; i < checklistItems.length; i++) {
-    console.log(checklistItems[i].id, checklistItems[i].checked);
+    // update the object keys with the check status
+    passwordOptions[checklistItems[i].id] = checklistItems[i].checked;
   }
+
+  // 2. then generate the password
 });
 
 
+// ----------------------------------------------------------------
 
 
 
