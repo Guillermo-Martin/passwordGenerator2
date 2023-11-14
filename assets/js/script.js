@@ -1,3 +1,32 @@
+// ---------- Checkbox functionality ----------
+let checklist = document.querySelector(".checklist");
+let lowercaseLetters = document.getElementById("lowercase-letters");
+let uppercaseLetters = document.getElementById("uppercase-letters");
+let numbers = document.getElementById("numbers");
+let specialCharacters = document.getElementById("special-characters");
+
+// console.log(lowercaseLetters);
+// console.log(lowercaseLetters.checked);
+
+// whenever a checklist item is checked/unchecked, run a function to see which options is checked/unchecked.
+// add an event listener to the checklist
+checklist.addEventListener("click", (event) => {
+  // alert("you clicked on the list!");
+  console.log(event.target ,'adfasdf');
+
+  // check to see which ones are checked
+  console.log(lowercaseLetters.checked)
+  console.log(uppercaseLetters.checked)
+  console.log(numbers.checked)
+  console.log(specialCharacters.checked)
+})
+
+
+
+
+
+
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
