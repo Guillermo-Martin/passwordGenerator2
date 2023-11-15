@@ -25,3 +25,12 @@ h1 {
 .checkbox-container {
   margin-bottom: 60px;
 }
+
+/* new password button */
+#new-password {
+  display: none;
+}
+
+#new-password.show {
+  display: block;
+}

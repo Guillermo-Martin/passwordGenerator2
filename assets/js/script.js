@@ -8,6 +8,7 @@ let specialCharacters = document.getElementById("special-characters");
 let createPaswordBtn = document.getElementById("create-password");
 let passwordLengthInput = document.getElementById("pw-length");
 let passwordBox = document.querySelector(".password-box");
+let newPasswordBtn = document.getElementById("new-password");
 
 
 // ----------------------------------------------------------------
@@ -109,13 +110,18 @@ createPaswordBtn.addEventListener("click", () => {
         specialCharacters();
       }
     }
+
   }
 
+  // display password to the user
   passwordBox.textContent = finalPassword;
-
-  
-
   console.log("final password", finalPassword, finalPassword.length);
+
+  // show the "Create new password" button when a password is shown
+  if(finalPassword.length !== 0) {
+    newPasswordBtn.classList.add("show");
+  }
+  
 });
 
 
