@@ -117,6 +117,8 @@ createPasswordBtn.addEventListener("click", () => {
   passwordBox.textContent = finalPassword;
   console.log("final password", finalPassword, finalPassword.length);
 
+  // NEXT STEP *** disable inputs of checkboxes and number input
+
   // show the "Create new password" button when a password is shown, hide the "Create password"
   if(finalPassword.length !== 0) {
     createPasswordBtn.classList.add("hide");
@@ -128,7 +130,32 @@ createPasswordBtn.addEventListener("click", () => {
 
 // ----------------------------------------------------------------
 
+newPasswordBtn.addEventListener("click", () => {
+  // alert("hello!");
+  // when you click the new password button, reset the password options object
+  passwordOptions = {};
+  
 
+  // remove checkmarks from boxes
+  lowercaseLetters.checked = false;
+  uppercaseLetters.checked = false;
+  numbers.checked = false;
+  specialCharacters.checked = false;
+
+  // remove the value from the number input
+  passwordLengthInput.value = "";
+
+  // remove the password
+  passwordBox.textContent = "";
+
+  // show the "Create password button"
+  createPasswordBtn.classList.remove("hide");
+
+  // hide the "Create another password" button
+  newPasswordBtn.classList.remove("show");
+
+  console.log(passwordOptions);
+})
 
 
 
