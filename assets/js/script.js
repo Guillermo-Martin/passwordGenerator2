@@ -85,33 +85,49 @@ createPaswordBtn.addEventListener("click", () => {
 
   // 3. use these to create a password using the functions below
   for(let j = 0; j < passwordLength; j++) {
-    // console.log("hello!");
+    // console.log(passwordLength)
+    // // console.log("hello!");
+    // console.log(passwordOptions["lowercase-letters"]);
+
+    // if(passwordOptions["lowercase-letters"]) {
+    //   console.log("add lowercase letter!");
+    // }
+
+    // if lower case is true and the finalpassword length doesn't equal the asked for password length, add a letter
+    // if (passwordOptions["lowercase-letters"] && finalPassword.length !== passwordLength) {
+    //   var letters = "abcdefghijklmnopqrstuvwxyz";
+    //   lowercase();
+    // }
+
+    
+
     // Generate random lowercase letter based on prompt
-    if (passwordOptions["lowercase-letters"] && finalPassword.length !== passwordLength) {
+    if (passwordOptions["lowercase-letters"] && finalPassword.length < passwordLength) {
       var letters = "abcdefghijklmnopqrstuvwxyz";
       lowercase();
     }
 
-    // Generate random uppercase letter based on prompt
-    if (passwordOptions["uppercase-letters"] && finalPassword.length !== passwordLength) {
+    // // Generate random uppercase letter based on prompt
+    if (passwordOptions["uppercase-letters"] && finalPassword.length < passwordLength) {
       var letters = "abcdefghijklmnopqrstuvwxyz";
       uppercase();
     }
 
+
     // Generate random number based on prompt
-    if (passwordOptions["numbers"] && finalPassword.length !== passwordLength) {
+    if (passwordOptions["numbers"] && finalPassword.length < passwordLength) {
       var numbers = "1234567890";
       number();
     }
 
     // Generate random special based on prompt
-    if (passwordOptions["special-characters"] && finalPassword.length !== passwordLength) {
+    if (passwordOptions["special-characters"] && finalPassword.length < passwordLength) {
       var special = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
       specialCharacters();
     }
   }
 
-  console.log("final password", finalPassword);
+  console.log("final password", finalPassword, finalPassword.length);
 });
 
 
