@@ -40,3 +40,8 @@ h1 {
 #new-password.show {
   display: block;
 }
+
+/* password box */
+.password-box {
+  word-break: break-all;
+}
