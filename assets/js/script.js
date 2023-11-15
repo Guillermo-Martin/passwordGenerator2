@@ -5,7 +5,7 @@ let lowercaseLetters = document.getElementById("lowercase-letters");
 let uppercaseLetters = document.getElementById("uppercase-letters");
 let numbers = document.getElementById("numbers");
 let specialCharacters = document.getElementById("special-characters");
-let createPaswordBtn = document.getElementById("create-password");
+let createPasswordBtn = document.getElementById("create-password");
 let passwordLengthInput = document.getElementById("pw-length");
 let passwordBox = document.querySelector(".password-box");
 let newPasswordBtn = document.getElementById("new-password");
@@ -15,7 +15,7 @@ let newPasswordBtn = document.getElementById("new-password");
 
 
 // create password function
-createPaswordBtn.addEventListener("click", () => {
+createPasswordBtn.addEventListener("click", () => {
   console.log("let's create a password!");
   // password options
   let passwordOptions = {};
@@ -117,11 +117,11 @@ createPaswordBtn.addEventListener("click", () => {
   passwordBox.textContent = finalPassword;
   console.log("final password", finalPassword, finalPassword.length);
 
-  // show the "Create new password" button when a password is shown
+  // show the "Create new password" button when a password is shown, hide the "Create password"
   if(finalPassword.length !== 0) {
+    createPasswordBtn.classList.add("hide");
     newPasswordBtn.classList.add("show");
   }
-  
 });
 
 

@@ -26,6 +26,12 @@ h1 {
   margin-bottom: 60px;
 }
 
+/* create password button */
+#create-password.hide {
+  display: none;
+}
+
+
 /* new password button */
 #new-password {
   display: none;
