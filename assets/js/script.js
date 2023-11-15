@@ -78,37 +78,41 @@ createPaswordBtn.addEventListener("click", () => {
 
   // check to see if the number is between 8 and 128
   if(passwordLength < 8 || passwordLength > 128) {
+    // warn user and don't create a password
     alert("please pick a number between 8 and 128!");
+  } else {
+    // create a password
+    // 3. use these to create a password using the functions below
+    for(let j = 0; j < passwordLength; j++) {
+      // Generate random lowercase letter based on prompt
+      if (passwordOptions["lowercase-letters"] && finalPassword.length < passwordLength) {
+        var letters = "abcdefghijklmnopqrstuvwxyz";
+        lowercase();
+      }
+
+      // // Generate random uppercase letter based on prompt
+      if (passwordOptions["uppercase-letters"] && finalPassword.length < passwordLength) {
+        var letters = "abcdefghijklmnopqrstuvwxyz";
+        uppercase();
+      }
+
+      // Generate random number based on prompt
+      if (passwordOptions["numbers"] && finalPassword.length < passwordLength) {
+        var numbers = "1234567890";
+        number();
+      }
+
+      // Generate random special based on prompt
+      if (passwordOptions["special-characters"] && finalPassword.length < passwordLength) {
+        var special = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
+        specialCharacters();
+      }
+    }
   }
 
 
 
-  // 3. use these to create a password using the functions below
-  for(let j = 0; j < passwordLength; j++) {
-    // Generate random lowercase letter based on prompt
-    if (passwordOptions["lowercase-letters"] && finalPassword.length < passwordLength) {
-      var letters = "abcdefghijklmnopqrstuvwxyz";
-      lowercase();
-    }
-
-    // // Generate random uppercase letter based on prompt
-    if (passwordOptions["uppercase-letters"] && finalPassword.length < passwordLength) {
-      var letters = "abcdefghijklmnopqrstuvwxyz";
-      uppercase();
-    }
-
-    // Generate random number based on prompt
-    if (passwordOptions["numbers"] && finalPassword.length < passwordLength) {
-      var numbers = "1234567890";
-      number();
-    }
-
-    // Generate random special based on prompt
-    if (passwordOptions["special-characters"] && finalPassword.length < passwordLength) {
-      var special = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
-      specialCharacters();
-    }
-  }
+  
 
   console.log("final password", finalPassword, finalPassword.length);
 });
