@@ -32,8 +32,7 @@ createPaswordBtn.addEventListener("click", () => {
   // 3.  get the length value
   console.log("line 31", passwordLength);
 
-  // 4. use these to create a password using the functions below
-
+  
   // 5. check to see if at least one box was selected, check to see if length is within range
   // loop through the object and see if everything is false
   for(let key in passwordOptions) {
@@ -48,7 +47,12 @@ createPaswordBtn.addEventListener("click", () => {
     alert("you must select at least one option!");
   }
 
-  console.log("options not checked", optionsFalse);
+  // 6. check to see if the number is between 8 and 128
+  if(passwordLength < 8 || passwordLength > 125) {
+    alert("please pick a number between 8 and 128!");
+  }
+
+  // 4. use these to create a password using the functions below
 });
 
 
