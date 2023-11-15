@@ -18,6 +18,7 @@ createPaswordBtn.addEventListener("click", () => {
   // password options
   let passwordOptions = {};
   let passwordLength = passwordLengthInput.value;
+  let optionsFalse = 0;
 
   // 1. check which boxes are checked and update the passwordOptions object
   for(let i = 0; i < checklistItems.length; i++) {
@@ -32,6 +33,22 @@ createPaswordBtn.addEventListener("click", () => {
   console.log("line 31", passwordLength);
 
   // 4. use these to create a password using the functions below
+
+  // 5. check to see if at least one box was selected, check to see if length is within range
+  // loop through the object and see if everything is false
+  for(let key in passwordOptions) {
+    // if an option is false, add it to the "optionsFalse" variable
+    if(`${passwordOptions[key]}` === 'false') {
+      optionsFalse++
+    }
+  }
+
+  // if optionsFalse equals 4 (meaning no options were checked), warn user
+  if(optionsFalse === 4) {
+    alert("you must select at least one option!");
+  }
+
+  console.log("options not checked", optionsFalse);
 });
 
 
