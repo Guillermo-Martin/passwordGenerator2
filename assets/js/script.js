@@ -6,7 +6,7 @@ let uppercaseLetters = document.getElementById("uppercase-letters");
 let numbers = document.getElementById("numbers");
 let specialCharacters = document.getElementById("special-characters");
 let createPaswordBtn = document.getElementById("create-password");
-let passwordLengthInput = document.getElementById("password-length");
+let passwordLengthInput = document.getElementById("pw-length");
 
 
 // ----------------------------------------------------------------
@@ -85,22 +85,6 @@ createPaswordBtn.addEventListener("click", () => {
 
   // 3. use these to create a password using the functions below
   for(let j = 0; j < passwordLength; j++) {
-    // console.log(passwordLength)
-    // // console.log("hello!");
-    // console.log(passwordOptions["lowercase-letters"]);
-
-    // if(passwordOptions["lowercase-letters"]) {
-    //   console.log("add lowercase letter!");
-    // }
-
-    // if lower case is true and the finalpassword length doesn't equal the asked for password length, add a letter
-    // if (passwordOptions["lowercase-letters"] && finalPassword.length !== passwordLength) {
-    //   var letters = "abcdefghijklmnopqrstuvwxyz";
-    //   lowercase();
-    // }
-
-    
-
     // Generate random lowercase letter based on prompt
     if (passwordOptions["lowercase-letters"] && finalPassword.length < passwordLength) {
       var letters = "abcdefghijklmnopqrstuvwxyz";
@@ -112,7 +96,6 @@ createPaswordBtn.addEventListener("click", () => {
       var letters = "abcdefghijklmnopqrstuvwxyz";
       uppercase();
     }
-
 
     // Generate random number based on prompt
     if (passwordOptions["numbers"] && finalPassword.length < passwordLength) {
