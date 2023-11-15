@@ -7,6 +7,7 @@ let numbers = document.getElementById("numbers");
 let specialCharacters = document.getElementById("special-characters");
 let createPaswordBtn = document.getElementById("create-password");
 let passwordLengthInput = document.getElementById("pw-length");
+let passwordBox = document.querySelector(".password-box");
 
 
 // ----------------------------------------------------------------
@@ -110,7 +111,7 @@ createPaswordBtn.addEventListener("click", () => {
     }
   }
 
-
+  passwordBox.textContent = finalPassword;
 
   
 
