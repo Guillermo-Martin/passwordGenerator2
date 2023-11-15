@@ -3,13 +3,14 @@ let checklist = document.querySelector(".checklist");
 let checklistItems = document.querySelectorAll(".checklist-item")
 let lowercaseLetters = document.getElementById("lowercase-letters");
 let uppercaseLetters = document.getElementById("uppercase-letters");
-let numbers = document.getElementById("numbers");
+let numbersBox = document.getElementById("numbers");
 let specialCharacters = document.getElementById("special-characters");
 let createPasswordBtn = document.getElementById("create-password");
 let passwordLengthInput = document.getElementById("pw-length");
 let passwordBox = document.querySelector(".password-box");
 let newPasswordBtn = document.getElementById("new-password");
 
+console.log("line 13", numbers)
 
 // ----------------------------------------------------------------
 
@@ -44,7 +45,7 @@ createPasswordBtn.addEventListener("click", () => {
     finalPassword = finalPassword + randomN;
   }
 
-  function specialCharacters() {
+  function specialCharactersFunc() {
     var randomNum = Math.floor(Math.random() * special.length);
     var randomS = special[randomNum];
     finalPassword = finalPassword + randomS;
@@ -107,7 +108,7 @@ createPasswordBtn.addEventListener("click", () => {
       // Generate random special based on prompt
       if (passwordOptions["special-characters"] && finalPassword.length < passwordLength) {
         var special = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
-        specialCharacters();
+        specialCharactersFunc();
       }
     }
 
@@ -117,13 +118,21 @@ createPasswordBtn.addEventListener("click", () => {
   passwordBox.textContent = finalPassword;
   console.log("final password", finalPassword, finalPassword.length);
 
-  // NEXT STEP *** disable inputs of checkboxes and number input
-
   // show the "Create new password" button when a password is shown, hide the "Create password"
   if(finalPassword.length !== 0) {
     createPasswordBtn.classList.add("hide");
     newPasswordBtn.classList.add("show");
+
+    // NEXT STEP *** disable inputs of checkboxes and number input
+    lowercaseLetters.disabled = true;
+    uppercaseLetters.disabled = true;
+    numbersBox.disabled = true;
+    specialCharacters.disabled = true;
+    passwordLengthInput.disabled = true;
   }
+
+  
+  
 });
 
 
@@ -155,6 +164,13 @@ newPasswordBtn.addEventListener("click", () => {
   newPasswordBtn.classList.remove("show");
 
   console.log(passwordOptions);
+
+  // enable all the inputs
+  lowercaseLetters.disabled = false;
+  uppercaseLetters.disabled = false;
+  numbersBox.disabled = false;
+  specialCharacters.disabled = false;
+  passwordLengthInput.disabled = false;
 })
 
 
