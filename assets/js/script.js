@@ -200,6 +200,20 @@ passwordLengthInput.addEventListener("click", () => {
 });
 
 
+// copy functionality 
+passwordBox.addEventListener("click", () => {
+  // copy functionality:  https://stackoverflow.com/questions/63033012/copy-the-text-to-the-clipboard-without-using-any-input
+  navigator.clipboard.writeText(passwordBox.textContent)
+    .then(() => {
+      console.log(`Copied text to clipboard: ${passwordBox.textContent}`);
+      alert(`Copied text to clipboard: ${passwordBox.textContent}`);
+    })
+    .catch((error) => {
+      console.error(`Could not copy text: ${error}`);
+    });
+});
+
+
 // NEXT STEPS -
 // replace alerts with warning messages
 // add a copy function
