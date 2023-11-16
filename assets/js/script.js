@@ -190,6 +190,15 @@ for(let k = 0; k < checklistItems.length; k++) {
   });
 };
 
+// check to see if the warning messsage is there
+passwordLengthInput.addEventListener("click", () => {
+  // alert("you clicked on the password length!");
+  console.log(lengthWarning.textContent, "line 196");
+  if(lengthWarning.textContent === "Please pick a number between 8 and 128!") {
+    lengthWarning.textContent = "";
+  }
+});
+
 
 // NEXT STEPS -
 // replace alerts with warning messages
