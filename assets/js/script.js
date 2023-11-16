@@ -9,8 +9,11 @@ let createPasswordBtn = document.getElementById("create-password");
 let passwordLengthInput = document.getElementById("pw-length");
 let passwordBox = document.querySelector(".password-box");
 let newPasswordBtn = document.getElementById("new-password");
+let optionsWarning = document.querySelector(".option-warning");
+let lengthWarning = document.querySelector(".length-warning");
 
-console.log("line 13", numbers)
+// console.log("line 13", numbers);
+// console.log(optionsWarning);
 
 // ----------------------------------------------------------------
 
@@ -76,13 +79,15 @@ createPasswordBtn.addEventListener("click", () => {
 
   // if optionsFalse equals 4 (meaning no options were checked), warn user
   if(optionsFalse === 4) {
-    alert("you must select at least one option!");
+    // alert("you must select at least one option!");
+    optionsWarning.textContent = "You must select at least one option!";
   }
 
   // check to see if the number is between 8 and 128
   if(passwordLength < 8 || passwordLength > 128) {
     // warn user and don't create a password
-    alert("please pick a number between 8 and 128!");
+    // alert("please pick a number between 8 and 128!");
+    lengthWarning.textContent = "Please pick a number between 8 and 128!";
   } else {
     // create a password
     // 3. use these to create a password using the functions below
@@ -172,3 +177,7 @@ newPasswordBtn.addEventListener("click", () => {
   specialCharacters.disabled = false;
   passwordLengthInput.disabled = false;
 });
+
+// NEXT STEPS -
+// replace alerts with warning messages
+// add a copy function
