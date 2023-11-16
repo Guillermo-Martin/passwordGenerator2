@@ -57,6 +57,7 @@ createPasswordBtn.addEventListener("click", () => {
 
 
 
+
   // 1. check which boxes are checked and update the passwordOptions object
   for(let i = 0; i < checklistItems.length; i++) {
     // update the object keys with the check status
@@ -135,12 +136,10 @@ createPasswordBtn.addEventListener("click", () => {
     specialCharacters.disabled = true;
     passwordLengthInput.disabled = true;
   }
-
-  
-  
 });
 
-
+// ---------------------------------------------------------------
+// when you click on any of the options, see if the warning message is showing
 
 // ----------------------------------------------------------------
 
@@ -177,6 +176,20 @@ newPasswordBtn.addEventListener("click", () => {
   specialCharacters.disabled = false;
   passwordLengthInput.disabled = false;
 });
+
+
+
+// check to see if the warning message is there
+for(let k = 0; k < checklistItems.length; k++) {
+  checklistItems[k].addEventListener("click", () => {
+    // alert("you clicked on an option!");
+    console.log(optionsWarning.textContent, "line 186");
+    if(optionsWarning.textContent === "You must select at least one option!"){
+      optionsWarning.textContent = "";
+    }
+  });
+};
+
 
 // NEXT STEPS -
 // replace alerts with warning messages
