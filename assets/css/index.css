@@ -113,4 +113,7 @@ input[type="checkbox"] {
 /* password box */
 .password-box {
   word-break: break-all;
+  min-height: 100px;
+  border: 1px solid white;
+  padding: 8px;
 }
