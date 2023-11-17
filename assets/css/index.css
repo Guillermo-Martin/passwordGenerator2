@@ -86,8 +86,8 @@ input[type="checkbox"] {
   line-height: 1.2;
 }
 
-/* create password button */
-#create-password {
+/* create password button, create another password button */
+#create-password, #new-password {
   width: 100%;
   padding: 8px 0;
   font-size: 16px;
