@@ -38,7 +38,7 @@ h2 {
 
 /* ---------- Checkboxes ---------- */
 .checkbox-container {
-  margin-bottom: 24px;
+  margin-bottom: 8px;
 }
 
 li {
@@ -68,7 +68,7 @@ input[type="checkbox"] {
 
 /* input box container */
 .password-length-container {
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
 
 #pw-length {
@@ -81,8 +81,9 @@ input[type="checkbox"] {
 }
 
 .length-warning {
-  min-height: 32px;
+  min-height: 40px;
   color: red;
+  line-height: 1.2;
 }
 
 /* create password button */
