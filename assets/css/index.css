@@ -94,6 +94,7 @@ input[type="checkbox"] {
   border-radius: 20px;
   border: none;
   margin-bottom: 32px;
+  background: #f4b942;
 }
 
 #create-password.hide {
