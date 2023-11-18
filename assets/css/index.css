@@ -93,8 +93,13 @@ input[type="checkbox"] {
   font-size: 16px;
   border-radius: 20px;
   border: none;
+  margin: 0 auto;
   margin-bottom: 32px;
   background: #f4b942;
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #create-password.hide {
@@ -117,4 +122,28 @@ input[type="checkbox"] {
   border: 1px solid white;
   padding: 8px;
   border-radius: 10px;
+}
+
+/* ---------- Media Queries ---------- */
+@media only screen and (min-width: 391px) {
+  #pw-length {
+    /* border: 3px solid red; */
+    width: 15%;
+    margin-left: 8px;
+    margin-top: 0;
+    /* margin-bottom: 0; */
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  body {
+    height: 100vh;
+  }
+
+  main {
+    width: 75%;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 32px;
+  }
 }
