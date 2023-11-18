@@ -122,6 +122,9 @@ input[type="checkbox"] {
   border: 1px solid white;
   padding: 8px;
   border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ---------- Media Queries ---------- */
