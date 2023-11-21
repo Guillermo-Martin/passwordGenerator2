@@ -213,7 +213,20 @@ passwordBox.addEventListener("click", () => {
   navigator.clipboard.writeText(passwordBox.textContent)
     .then(() => {
       console.log(`Copied text to clipboard: ${passwordBox.textContent}`);
-      alert(`Copied text to clipboard: ${passwordBox.textContent}`);
+      // alert(`Copied text to clipboard: ${passwordBox.textContent}`);
+
+      // create a div
+      // let copyPopup = document.createElement("div");
+      // copyPopup.setAttribute("class", "copy-popup");
+      // copyPopup.textContent = "Copied!";
+      // passwordBox.appendChild(copyPopup);
+      copyMsg.textContent = "Copied!";
+
+      setTimeout(() => {
+        copyMsg.textContent = "Tap or click the box to copy your password!";
+      }, 1000);
+      
+      
     })
     .catch((error) => {
       console.error(`Could not copy text: ${error}`);

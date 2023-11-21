@@ -126,7 +126,10 @@ input[type="checkbox"] {
   align-items: center;
   justify-content: center;
   margin-bottom: 12px;
+  position: relative;
 }
+
+
 
 /* ---------- Media Queries ---------- */
 @media only screen and (min-width: 391px) {
