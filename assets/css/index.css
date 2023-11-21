@@ -22,6 +22,15 @@ header {
   margin-bottom: 48px;
 }
 
+header a {
+  color: #f4b942;
+  transition: color 0.2s;
+}
+
+header a:hover {
+  color: white;
+}
+
 .subheader {
   text-align: center;
 }
