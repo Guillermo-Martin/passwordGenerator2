@@ -33,6 +33,7 @@ header a:hover {
 
 .subheader {
   text-align: center;
+  line-height: 1.4;
 }
 
 h1 {
@@ -142,6 +143,10 @@ input[type="checkbox"] {
   position: relative;
 }
 
+.copy-message {
+  line-height: 1.4;
+  min-height: 45px;
+}
 
 
 /* ---------- Media Queries ---------- */
