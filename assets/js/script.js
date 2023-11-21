@@ -11,6 +11,7 @@ let passwordBox = document.querySelector(".password-box");
 let newPasswordBtn = document.getElementById("new-password");
 let optionsWarning = document.querySelector(".option-warning");
 let lengthWarning = document.querySelector(".length-warning");
+let copyMsg = document.querySelector(".copy-message");
 
 // console.log("line 13", numbers);
 // console.log(optionsWarning);
@@ -136,6 +137,9 @@ createPasswordBtn.addEventListener("click", () => {
     specialCharacters.disabled = true;
     passwordLengthInput.disabled = true;
   }
+
+  // show the copy message
+  copyMsg.textContent = "Tap or click the box to copy your password!";
 });
 
 // ---------------------------------------------------------------

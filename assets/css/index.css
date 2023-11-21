@@ -11,7 +11,7 @@ body {
 }
 
 main {
-  background-color: #2a2d43;
+  /* background-color: #2a2d43; */
   padding: 32px 16px;
   /* margin: 0 auto; */
   width: 100%;
@@ -146,7 +146,7 @@ input[type="checkbox"] {
   main {
     width: 75%;
     margin: 0 auto;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     padding: 32px;
     max-width: 432px;
   }
