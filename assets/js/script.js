@@ -136,10 +136,10 @@ createPasswordBtn.addEventListener("click", () => {
     numbersBox.disabled = true;
     specialCharacters.disabled = true;
     passwordLengthInput.disabled = true;
-  }
 
-  // show the copy message
-  copyMsg.textContent = "Tap or click the box to copy your password!";
+    // show the copy message
+    copyMsg.textContent = "Tap or click the box to copy your password!";
+  }
 });
 
 // ---------------------------------------------------------------
@@ -179,6 +179,9 @@ newPasswordBtn.addEventListener("click", () => {
   numbersBox.disabled = false;
   specialCharacters.disabled = false;
   passwordLengthInput.disabled = false;
+
+  // remove copy message
+  copyMsg.textContent = "";
 });
 
 
