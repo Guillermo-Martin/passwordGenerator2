@@ -58,7 +58,7 @@ createPasswordBtn.addEventListener("click", () => {
 
 
 
-
+  // ******* TALKING POINT - USING AN OBJECT TO KEEP TRACK OF OPTIONS, AND DETERMINING WHICH ONES WERE SELECTED *********
   // 1. check which boxes are checked and update the passwordOptions object
   for(let i = 0; i < checklistItems.length; i++) {
     // update the object keys with the check status
@@ -84,6 +84,8 @@ createPasswordBtn.addEventListener("click", () => {
     // alert("you must select at least one option!");
     optionsWarning.textContent = "You must select at least one option!";
   }
+
+  // ********* TALKING POINT - IF MORE THAT ONE OPTION WAS SELECTED, A PASSWORD THAT DIDN'T MEET THE SPECIFIED NUMBER WAS CREATED"
 
   // check to see if the number is between 8 and 128
   if(passwordLength < 8 || passwordLength > 128) {
@@ -129,6 +131,8 @@ createPasswordBtn.addEventListener("click", () => {
   if(finalPassword.length !== 0) {
     createPasswordBtn.classList.add("hide");
     newPasswordBtn.classList.add("show");
+
+    // ************* TALKING POINT - PREVENT A USER FROM SELECTING MORE OPTIONS AND CREATING ANOTHER PASSWORD THAT WOULD ADD MORE CHARACTERS TO AN ALREADY CREATED PASSWORD
 
     // NEXT STEP *** disable inputs of checkboxes and number input
     lowercaseLetters.disabled = true;
@@ -235,5 +239,9 @@ passwordBox.addEventListener("click", () => {
 
 
 // NEXT STEPS -
-// replace alerts with warning messages
-// add a copy function
+// clean up code - remove comments
+// clean up html
+// organize CSS and clean up
+// look at older commit and get samples for my talking points (take screenshots)
+// update copy for this particular project on the developer projects page
+// create the "learn more" page for this project

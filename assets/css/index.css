@@ -2,22 +2,19 @@
 
 
 body {
-  color: white;
-  /* height: 100vh; */
-  background-color: black;
-  display: flex;
   align-items: center;
+  background-color: black;
+  color: white;
+  display: flex;
   font-family: 'Roboto', sans-serif;
 }
 
 main {
-  /* background-color: #2a2d43; */
   padding: 32px 16px;
-  /* margin: 0 auto; */
   width: 100%;
-  /* border-radius: 20px; */
 }
 
+/* ---------- Header ---------- */
 header {
   margin-bottom: 48px;
 }
@@ -31,24 +28,25 @@ header a:hover {
   color: white;
 }
 
+/* ---------- Subheader ---------- */
 .subheader {
-  text-align: center;
   line-height: 1.4;
+  text-align: center;
 }
 
 h1 {
   font-size: 52px;
+  font-weight: 600;
   margin-bottom: 28px;
   text-align: center;
-  font-weight: 600;
 }
 
 h2 {
   font-size: 24px;
   font-weight: 400;
-  text-align: left;
-  margin-bottom: 12px;
   line-height: 1.1;
+  margin-bottom: 12px;
+  text-align: left;
 }
 
 /* ---------- Checkboxes ---------- */
@@ -57,98 +55,99 @@ h2 {
 }
 
 li {
-  margin-bottom: 8px;
-  display: flex;
   align-items: center;
+  display: flex;
+  margin-bottom: 8px;
 }
 
 input[type="checkbox"] {
-  /* border: 3px solid red; */
-  width: 20px;
   height: 20px;
   margin-right: 12px;
+  width: 20px;
 }
 
 /* option warning container */
 .option-warning-container {
-  min-height: 20px;
-  height: 28px;
-  display: flex;
   align-items: center;
+  display: flex;
+  height: 28px;
+  min-height: 20px;
 }
 
 .option-warning {
   color: red;
 }
 
-/* input box container */
+/* ---------- Password length container ---------- */
 .password-length-container {
   margin-bottom: 28px;
 }
 
+/* Password input box */
 #pw-length {
-  /* border: 3px solid red; */
+  height: 24px;
+  margin-bottom: 12px;
+  margin-top: 12px;
   padding-left: 8px;
   width: 25%;
-  height: 24px;
-  margin-top: 12px;
-  margin-bottom: 12px;
 }
 
 .length-warning {
-  min-height: 40px;
   color: red;
   line-height: 1.2;
+  min-height: 40px;
 }
 
-/* create password button, create another password button */
+/* ---------- "Create password" button, "Create another password" button ---------- */
 #create-password, #new-password {
-  width: 100%;
-  padding: 8px 0;
-  font-size: 16px;
-  border-radius: 20px;
+  align-items: center;
+  background: #f4b942;
   border: none;
+  border-radius: 20px;
+  display: flex;
+  font-size: 16px;
+  justify-content: center;
   margin: 0 auto;
   margin-bottom: 32px;
-  background: #f4b942;
   max-width: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 8px 0;
+  width: 100%;
 }
 
+/* Hide the "Create password" button */
 #create-password.hide {
   display: none;
 }
 
-/* new password button */
+/* "Create another password" button */
 #new-password {
   display: none;
 }
 
+/* Show "Create another password" button */
 #new-password.show {
   display: block;
 }
 
-/* password box */
+/* ---------- Password box ---------- */
 .password-box {
-  word-break: break-all;
-  min-height: 100px;
+  align-items: center;
   border: 1px solid white;
-  padding: 8px;
   border-radius: 10px;
   display: flex;
-  align-items: center;
   justify-content: center;
   margin-bottom: 12px;
+  min-height: 100px;
+  padding: 8px;
   position: relative;
+  word-break: break-all;
 }
 
+/* "Copied" message */
 .copy-message {
   line-height: 1.4;
   min-height: 45px;
 }
-
 
 /* ---------- Media Queries ---------- */
 @media only screen and (min-width: 339px) {
@@ -159,11 +158,9 @@ input[type="checkbox"] {
 
 @media only screen and (min-width: 391px) {
   #pw-length {
-    /* border: 3px solid red; */
-    width: 15%;
     margin-left: 8px;
     margin-top: 0;
-    /* margin-bottom: 0; */
+    width: 15%;
   }
 }
 
@@ -173,10 +170,9 @@ input[type="checkbox"] {
   }
 
   main {
-    width: 75%;
     margin: 0 auto;
-    /* border-radius: 20px; */
-    padding: 32px;
     max-width: 432px;
+    padding: 32px;
+    width: 75%;
   }
 }
