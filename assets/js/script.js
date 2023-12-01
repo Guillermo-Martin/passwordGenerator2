@@ -212,9 +212,16 @@ passwordLengthInput.addEventListener("click", () => {
 
 
 // copy functionality 
+console.log("line 215", passwordBox.textContent)
+// if(passwordBox.textContent) {
+//   alert('hello!');
+// }
+
 passwordBox.addEventListener("click", () => {
-  // copy functionality:  https://stackoverflow.com/questions/63033012/copy-the-text-to-the-clipboard-without-using-any-input
-  navigator.clipboard.writeText(passwordBox.textContent)
+  if(passwordBox.textContent) {
+    // alert("hello!");
+    // copy functionality:  https://stackoverflow.com/questions/63033012/copy-the-text-to-the-clipboard-without-using-any-input
+    navigator.clipboard.writeText(passwordBox.textContent)
     .then(() => {
       console.log(`Copied text to clipboard: ${passwordBox.textContent}`);
       // alert(`Copied text to clipboard: ${passwordBox.textContent}`);
@@ -235,6 +242,8 @@ passwordBox.addEventListener("click", () => {
     .catch((error) => {
       console.error(`Could not copy text: ${error}`);
     });
+  }
+  
 });
 
 
