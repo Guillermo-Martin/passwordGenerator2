@@ -119,6 +119,12 @@ input[type="checkbox"] {
   padding: 8px 0;
   width: 100%;
   cursor: pointer;
+  transition: all 0.2s;
+}
+
+#create-password:hover, #new-password:hover {
+  background: #2a2d43;
+  color: white;
 }
 
 /* Hide the "Create password" button */
@@ -148,6 +154,7 @@ input[type="checkbox"] {
   padding: 8px;
   position: relative;
   word-break: break-all;
+  cursor: pointer;
 }
 
 /* "Copied" message */
