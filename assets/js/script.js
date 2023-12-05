@@ -13,7 +13,6 @@ let passwordLengthInput = document.getElementById("pw-length");
 let specialCharacters = document.getElementById("special-characters");
 let uppercaseLetters = document.getElementById("uppercase-letters");
 
-
 // ---------- Create password function ----------
 createPasswordBtn.addEventListener("click", () => {
   // final password
@@ -24,27 +23,27 @@ createPasswordBtn.addEventListener("click", () => {
   let passwordLength = passwordLengthInput.value;
 
   // functions to create a password
-  function lowercase() {
-    var randomNum = Math.floor(Math.random() * letters.length);
-    var randomL = letters[randomNum];
+  let lowercase = () => {
+    let randomNum = Math.floor(Math.random() * letters.length);
+    let randomL = letters[randomNum];
     finalPassword = finalPassword + randomL;
   }
 
-  function uppercase() {
-    var randomNum = Math.floor(Math.random() * letters.length);
-    var randomU = letters[randomNum].toUpperCase();
+  let uppercase = () => {
+    let randomNum = Math.floor(Math.random() * letters.length);
+    let randomU = letters[randomNum].toUpperCase();
     finalPassword = finalPassword + randomU;
   }
 
-  function number() {
-    var randomNum = Math.floor(Math.random() * numbers.length);
-    var randomN = numbers[randomNum];
+  let number = () => {
+    let randomNum = Math.floor(Math.random() * numbers.length);
+    let randomN = numbers[randomNum];
     finalPassword = finalPassword + randomN;
   }
 
-  function specialCharactersFunc() {
-    var randomNum = Math.floor(Math.random() * special.length);
-    var randomS = special[randomNum];
+  let specialCharactersFunc = () => {
+    let randomNum = Math.floor(Math.random() * special.length);
+    let randomS = special[randomNum];
     finalPassword = finalPassword + randomS;
   }
 
@@ -68,8 +67,6 @@ createPasswordBtn.addEventListener("click", () => {
     optionsWarning.textContent = "You must select at least one option!";
   }
 
-  // ********* TALKING POINT - IF MORE THAT ONE OPTION WAS SELECTED, A PASSWORD THAT DIDN'T MEET THE SPECIFIED NUMBER WAS CREATED"
-
   // 3.  check to see if the password length is between 8 and 128
   if(passwordLength < 8 || passwordLength > 128) {
     // if not, warn user and don't create a password
@@ -84,19 +81,19 @@ createPasswordBtn.addEventListener("click", () => {
       }
 
       // Generate random uppercase letter based on prompt
-      if (passwordOptions["uppercase-letters"] && finalPassword.length < passwordLength) {
+      if(passwordOptions["uppercase-letters"] && finalPassword.length < passwordLength) {
         var letters = "abcdefghijklmnopqrstuvwxyz";
         uppercase();
       }
 
       // Generate random number based on prompt
-      if (passwordOptions["numbers"] && finalPassword.length < passwordLength) {
+      if(passwordOptions["numbers"] && finalPassword.length < passwordLength) {
         var numbers = "1234567890";
         number();
       }
 
       // Generate random special based on prompt
-      if (passwordOptions["special-characters"] && finalPassword.length < passwordLength) {
+      if(passwordOptions["special-characters"] && finalPassword.length < passwordLength) {
         var special = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
         specialCharactersFunc();
       }
@@ -162,8 +159,6 @@ newPasswordBtn.addEventListener("click", () => {
 // if so, remove message after clicking on a checkbox
 for(let k = 0; k < checklistItems.length; k++) {
   checklistItems[k].addEventListener("click", () => {
-    // alert("you clicked on an option!");
-    console.log(optionsWarning.textContent, "line 186");
     if(optionsWarning.textContent === "You must select at least one option!"){
       optionsWarning.textContent = "";
     }
@@ -173,8 +168,6 @@ for(let k = 0; k < checklistItems.length; k++) {
 // Length functionality with warning message - check to see if the warning messsage is there.
 // if so, remove message after clicking on the length input
 passwordLengthInput.addEventListener("click", () => {
-  // alert("you clicked on the password length!");
-  console.log(lengthWarning.textContent, "line 196");
   if(lengthWarning.textContent === "Please pick a number between 8 and 128!") {
     lengthWarning.textContent = "";
   }
