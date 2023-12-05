@@ -1,4 +1,16 @@
+![password generator screenshot](./assets/images/password-generator.png) 
+
 # Password Generator
+
+Subheader - Brief description:  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+## About this project
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+## Technologies used
+
+## Want to learn more?
 
 <!-- https://guillermo-martin.github.io/passwordGenerator/
 
