@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Password Generator</title>
+    <!-- ---------- Stylesheets ---------- -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/index.css" />
 
@@ -16,10 +17,8 @@
   
   <!-- ---------- Body ---------- -->
   <body>
-    
      <!-- ---------- Main content ---------- -->
     <main>
-
       <!-- ----- Header ----- -->
       <div class="header-container">
         <header>
@@ -63,24 +62,19 @@
           <input type="number" id="pw-length" name="pw-length" min="8" max="128">
           <p class="length-warning"></p>
         </div>
-        
-
-        
       </div>
 
-
+      <!-- ----- "Create Password" and "Create another password" buttons ----- -->
       <button id="create-password">Create password</button>
       <button id="new-password">Create another password</button>
 
-      <!-- Div where password will go -->
+      <!-- div where password will go -->
       <div class="password-box-container">
         <h2>Your password:</h2>
         <div class="password-box"></div>
+        <!-- copy message -->
         <p class="copy-message"></p>
       </div>
-      
-      
-      
     </main>
    
     <!-- Javascript -->
