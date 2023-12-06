@@ -15,6 +15,7 @@ Click [here](https://guillermo-martin.github.io/passwordGenerator2/) to open up 
 
 
 ## About this project
+![password generator gift](./assets/images/password-generator-v1.png) 
 In this project, I wanted to revisit a project from my coding bootcamp and challenge myself by redesigning the application.  To see the application before I redesigned it, click [here](https://guillermo-martin.github.io/passwordGenerator/).  In the original project, the design was already complete, as the assignment mainly focused on building out the functionality.  In addition to the design, I wanted to address the functionality itself in order to improve the user experience.  One thing I wanted to address was the inability for a user to go backwards when asked what options they wanted in their password.  I also wanted to address the lack of a copy feature in the application.
 
 ## Technologies used
