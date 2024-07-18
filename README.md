@@ -21,4 +21,4 @@ In the original project, the design was already complete, as the assignment main
 
 
 ## Want to learn more?
-Want to learn about how I redesigned this application?  Read more [here](https://guillermo-martin.github.io/gcm-portfolio-0923/web-developer-projects/password-generator/)!
+Want to learn about how I redesigned this application?  Read more [here](https://guillermo-martin.github.io/web-developer-projects/password-generator/)!
